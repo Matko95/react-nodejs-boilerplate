@@ -8,7 +8,7 @@ Prerequisites: Node.js, MySQL server at port 3306
 Setup
 ```
     npm install
-    cp public/index.html.dev || cp public/index.html.prod
+    cp public/index.html.dev public/index.html || cp public/index.html.prod public/index.html
 ```
 Start
 ```
