@@ -1,0 +1,27 @@
+/*Mixins*/
+@import "mixins/mixins";
+
+/*Config*/
+@import "config/reset";
+
+/*Components*/
+@import "components/header";
+@import "components/form";
+
+/*Pages*/
+@import "pages/login";
+
+/*Icons*/
+@import "config/fonts";
+
+
+@import "vars";
+
+/*Scale the font-size for rems*/
+html{
+  font-size: 62.5%;
+  font-family: 'Open Sans', sans-serif;
+}
+* {
+  outline: none;
+}

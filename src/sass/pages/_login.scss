@@ -1,0 +1,96 @@
+.login {
+  background-color: #ebeef0;
+  height: 100vh;
+  width: 100%;
+
+  .login-form{
+    width: 350px;
+    margin: 80px auto 0;
+    text-align: center;
+
+    .bottom-links{
+      margin-top: 15px;
+      font-size: 14px;
+      text-align: center;
+      line-height: 15px;
+      display: block;
+
+      a {
+        text-decoration: none;
+        color: #666;
+
+        &:hover {
+          color: $color;
+        }
+      }
+    }
+
+    input,
+    button,
+    label{
+      display: block;
+      width: 100%;
+      border: 0;
+      box-sizing: border-box;
+    }
+
+    input[type=submit]{
+      background-color: $color;
+      height: 68px;
+      font-size: 18px;
+      color: #fff;
+      border-radius: 0 0 5px 5px;
+      transition: all 0.3s;
+
+      &:hover{
+        opacity: 0.8
+      }
+    }
+
+    label {
+      position: relative;
+
+      input[type=text],
+      input[type=password] {
+        background-color: #fff;
+        height: 69px;
+        padding: 0 20px 0 60px;
+        border: 1px solid #e5e5e5;
+        border-bottom: 0;
+        font-size: 15px;
+        color: #666;
+        position: relative;
+      }
+      &:first-child input {
+        border-radius: 5px 5px 0 0;
+      }
+
+      &::before {
+        width: 20px;
+        margin-left: 20px;
+        font-family: FontAwesome;
+        font-size: 20px;
+        color: #dadada;
+        text-align: center;
+        line-height: 68px;
+        vertical-align: middle;
+        position: absolute;
+        top: 1px;
+        left: 0;
+        z-index: 5;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+
+      &.username::before{
+        content: '\f007'
+      }
+
+      &.password::before{
+        content: '\f023'
+      }
+    }
+  }
+}

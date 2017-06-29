@@ -1,0 +1,11 @@
+@import "../vars";
+
+$color: #7ab55c;
+
+
+.error{
+  font-size: 14px;
+  color: $status-err;
+  margin-top: 10px;
+  transiton: all 0.3s ease;
+}

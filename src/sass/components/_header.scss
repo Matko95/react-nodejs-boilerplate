@@ -1,0 +1,16 @@
+$search-border-radius: 0.2rem;
+
+.dashboard-header {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border-bottom: 1px solid #cecece;
+  height: 80px;
+
+  .logo {
+    margin-left: 10%;
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+}
