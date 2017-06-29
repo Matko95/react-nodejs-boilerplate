@@ -66,8 +66,18 @@ export const checkLogin = () => {
                     localStorage.clear();
                     dispatch({
                         type: 'CLEAR_STORE'
-                    })
+                    });
+                    return;
                 }
+
+                dispatch(login_success(localStorage.getItem("jwt")));
             })
+    }
+};
+
+export const logout = () => {
+    localStorage.clear();
+    return {
+        type: 'CLEAR_STORE'
     }
 };

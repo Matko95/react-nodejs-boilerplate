@@ -3,18 +3,20 @@ let path = require('path');
 
 let config = {
     entry: [
-            'react-hot-loader/patch',
-            'webpack/hot/only-dev-server',
-            'webpack-dev-server/client?http://localhost:8080',
-            './src/react/'
+        'react-hot-loader/patch',
+        'webpack/hot/only-dev-server',
+        'webpack-dev-server/client?http://127.0.0.1:3300',
+        './src/react/'
     ],
     devServer: {
         contentBase: path.join(__dirname, './public/'),
+        hot: true,
+        headers: { "Access-Control-Allow-Origin": "*" }
     },
     output: {
         path: path.join(__dirname, './public/web/dist'),
         filename: 'bundle.js',
-        publicPath: '/static'
+        publicPath: 'http://127.0.0.1:3300/static/'
     },
     resolve: {
         extensions: ['.jsx', '.js', '.scss', '.eot', '.svg', '.ttf', '.woff', '.woff2', '.png', '.jpg'],
@@ -81,7 +83,8 @@ let config = {
         ]
     },
     plugins: [
-        new webpack.HotModuleReplacementPlugin()
+        new webpack.HotModuleReplacementPlugin(),
+        new webpack.NoEmitOnErrorsPlugin(),
     ]
 };
 
