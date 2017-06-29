@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Jun 29, 2017 at 03:46 PM
+-- Generation Time: Jun 29, 2017 at 03:54 PM
 -- Server version: 5.6.35
 -- PHP Version: 7.0.15
 
@@ -28,6 +28,14 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id_user`, `username`, `password`, `salt`) VALUES
+(1, 'matko', 'aef453e67eda5ba4f4924350fc0b3052cf8d13f1bf6b5116a73de3aa424897fda685159d98feb728c0c006af7c84157d04cd1b0e13e7830c64dfe4acf089a2ee', '21e8eab203ce806b'),
+(2, 'test', '7e9a554a147386015acf1d7a0b0b62dc2d84828bdc8fc52a989e58bfe65843d8b8494c3421832dd2c3ebcb5615b422377a1fd6973b94c2f529d204f2814360c3', '45eb6300ff18c807');
+
+--
 -- Indexes for dumped tables
 --
 
@@ -36,3 +44,13 @@ CREATE TABLE `users` (
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id_user`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;

@@ -2,7 +2,7 @@ export const user = (state = {
     isFetching: false,
     jwt: null,
     isAuthenticated: false,
-    error: ""
+    loginError: ""
 }, action) => {
     switch(action.type){
         case 'REGISTER_REQUEST':
@@ -18,14 +18,20 @@ export const user = (state = {
                 isFetching: action.isFetching,
                 jwt: action.jwt,
                 isAuthenticated: true,
-                error: ''
+                loginError: '',
+                registerError: ''
             };
-        case 'REGISTER_ERROR':
         case 'LOGIN_ERROR':
             return {
                 ...state,
                 isFetching: action.isFetching,
-                error: action.error
+                loginError: action.error
+            };
+        case 'REGISTER_ERROR':
+            return {
+                ...state,
+                isFetching: action.isFetching,
+                registerError: action.registerError
             };
         default:
             return state;

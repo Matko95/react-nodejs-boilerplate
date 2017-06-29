@@ -37,7 +37,7 @@ class Login extends Component{
                         <input type="password" autoComplete="new-password" ref="password" placeholder="Password"/>
                     </label>
                     <input onSubmit={this.handleFormSubmit} type="submit" value="Login"/>
-                    <p className="error">{this.props.error}</p>
+                    <p className="error">{this.props.loginError}</p>
                     <span className="bottom-links">
                         <Link to="/register">Sign up</Link>
                     </span>

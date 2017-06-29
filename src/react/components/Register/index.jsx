@@ -37,7 +37,7 @@ class Register extends Component{
                         <input type="password" autoComplete="new-password" ref="password" placeholder="Password"/>
                     </label>
                     <input onSubmit={this.handleFormSubmit} type="submit" value="Register"/>
-                    <p className="error">{this.props.error}</p>
+                    <p className="error">{this.props.registerError}</p>
                 </form>
             </div>
         )
