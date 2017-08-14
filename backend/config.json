@@ -1,0 +1,9 @@
+{
+  "secret": "secret-password",
+  "mysql": {
+    "host": "localhost",
+    "user": "root",
+    "password": "",
+    "database": "db"
+  }
+}

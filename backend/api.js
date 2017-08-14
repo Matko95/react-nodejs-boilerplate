@@ -1,15 +1,10 @@
 let mysql  = require('mysql'),
     jwt    = require('jsonwebtoken'),
-    config = require('./config').config;
+    config = require('./config');
 
 let { getToken, saltHashPassword } = require('./helpers');
 
-let connection = mysql.createConnection({
-    host     : 'localhost',
-    user     : 'root',
-    password : 'root',
-    database : 'db'
-});
+let connection = mysql.createConnection(config.mysql);
 
 connection.connect();
 
